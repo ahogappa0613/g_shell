@@ -25,6 +25,13 @@ impl Process {
                     return Err(e);
                 }
             }
+        } else if commands == "gcd" {
+            match built_in_command::gcd::run_gcd(command) {
+                Ok(_) => {}
+                Err(e) => {
+                    return Err(e);
+                }
+            }
         } else if commands == "exit" {
             match built_in_command::exit::run_exit(command) {
                 Ok(_) => {}
